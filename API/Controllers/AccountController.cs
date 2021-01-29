@@ -19,7 +19,7 @@ namespace API.Controllers
             _tokenService = tokenService;
             _context = context;
         }
-        [HttpGet("register")]
+        [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
             if (await UserExists(registerDto.Username))
