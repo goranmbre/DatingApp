@@ -1,0 +1,15 @@
+<h4>Greska na serveru - pokusajte da isvezite stranicu!</h4>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Greska: {{error.message}}</h5>
+    <p class="font-weight-bold">Poruka neka</p>
+    <p>Sta mozete da uradite?</p>
+    <ol>
+        <li>Optvori Chrome dev tools</li>
+        <li>Proveriti network tan</li>
+        <li>Proveriti neuspele zahteve</li>
+        <li>Proveriti da li je URL zahtev ispravan</li>
+        <li>Reprodukuj gresku u Postman-u - ako se pojavi ista greska, onda problem nije do Angulara</li>
+    </ol>
+    <p>Pocnite od Stack Tace-a</p>
+    <code class="mt-5" style="background-color: whitesmoke;">{{error.details}}</code>
+</ng-container>
